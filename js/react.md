@@ -119,7 +119,7 @@ Next, add the following methods before the component's `render` method as follow
     const file = evt.target.files[0];
     const name = file.name;
 
-    Storage.put(name, file).then(() => {
+    Storage.put(name, file, { level: 'private' }).then(() => {
       this.setState({ file: name });
     })
   }
